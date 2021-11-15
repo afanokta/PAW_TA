@@ -25,6 +25,8 @@
 
 
 <body>
+  <div></div>
+  <div></div>
   <div id="wrapper">
     <div class="overlay"></div>
 
