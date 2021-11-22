@@ -1,0 +1,154 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #CCB8DC;
+}
+
+.bg-primary-purple {
+  color: #542E71 !important;
+}
+
+.search-bar {
+  background: #542E71 !important;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25) !important;
+  border-radius: 15px !important;
+  padding: 6px 21px !important;
+  border: 1px solid transparent !important;
+}
+
+.playlist-logo {
+  width: 50px;
+  height: 50px;
+}
+
+.discover-logo {
+  width: 50px;
+  height: 50px;
+}
+
+.profile-pic {
+  width: 50px;
+  margin-left: 30px;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-group .form-control-icon {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+  right: 0;
+  top: 0px;
+}
+
+.carousel-inner {
+  border-radius: 25px !important;
+}
+
+.playlist {
+  margin-top: 57px;
+}
+
+.title-section {
+  font-size: 2.25rem;
+}
+
+.title-section a {
+  text-decoration: none !important;
+  color: black !important;
+  transition: 0.3s;
+}
+
+.title-section a:hover {
+  color: white !important;
+}
+
+.my-1 {
+  height: 250px;
+  width: 250px;
+}
+
+.music-video {
+  margin-top: 57px;
+  margin-bottom: 130px;
+}
+
+.now-playing {
+  position: sticky;
+  bottom: 0;
+  z-index: 1000;
+  background-color: #542E71;
+  border-radius: 50px 50px 0px 0px;
+  padding: 24px 55px;
+}
+
+.icon-playing img {
+  max-width: 110px;
+  border-radius: 20px;
+}
+
+button {
+  background-color: transparent !important;
+  color: transparent !important;
+  border-color: transparent !important;
+}
+
+.bar-playing {
+  border-top: 6px solid #C4C4C4;
+  border-radius: 50px;
+  margin-bottom: 40px;
+}
+
+
+.timer-timer {
+  color: white;
+}
+
+.title-music {
+  color: white;
+  font-weight: 600;
+  font-size: 1.625rem;
+}
+
+.artist-music {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: white;
+}
+
+.follow {
+  border-radius: 100px 100px 100px 100px;
+  height: 200px;
+  width: 200px;
+  margin-left: 100px;
+}
+
+.items div img {
+
+  width: auto;
+  height: 100%;
+  transition: 0.3s;
+}
+
+.items {
+  border-radius: 25px;
+}
+
+.picture {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+}
+
+.video1 {
+  border-radius: 20px;
+}

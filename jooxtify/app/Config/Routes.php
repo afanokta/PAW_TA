@@ -32,10 +32,26 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
+$routes->get('/jooxtify', 'Home::jooxtify');
 $routes->get('/dashboard', 'penggunaController::index');
 $routes->get('/dashboard/lagu', 'laguController::index');
 $routes->get('/dashboard/genre', 'genreController::index');
 $routes->get('/dashboard/genre/create', 'genreController::create');
+$routes->post('/login/start', 'loginController::start');
+
+
+// ALBUM
+$routes->get('/dashboard/album', 'albumController::index');
+$routes->get('/dashboard/album/create', 'albumController::create');
+$routes->post('/dashboard/album', 'albumController::add');
+$routes->get('/dashboard/album/edit/(:num)', 'albumController::edit/$1');
+$routes->post('/dashboard/album/update', 'albumController::update');
+$routes->get('/dashboard/album/hapus/(:num)', 'albumController::delete/$1');
+$routes->get('/dashboard/album/restore/(:num)', 'albumController::restore/$1');
+$routes->get('/dashboard/album/hapus-permanen/(:num)', 'albumController::full_delete/$1');
+
+//PENYANYI
+$routes->get('/dashboard/penyanyi', 'penyanyiController::index');
 
 /*
  * --------------------------------------------------------------------
