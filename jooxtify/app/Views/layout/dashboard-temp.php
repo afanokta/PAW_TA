@@ -28,98 +28,106 @@
     <nav class="fixed-top align-top" id="sidebar-wrapper" role="navigation">
       <div class="simplebar-content" style="padding: 0px;">
         <a class="sidebar-brand" href="index.html">
-          <span class="align-middle">JOOXTIFY</span>
+          <img src="/img/jooxtify-logo.svg" class="align-middle" width="200px"></img>
         </a>
 
         <ul class="navbar-nav align-self-stretch">
-
-          <li class="sidebar-header">
-            Pages
-          </li>
           <li class="">
-            <a class="nav-link text-left active" role="button" aria-haspopup="true" aria-expanded="false">
+            <a href="/dashboard" class="Pengguna nav-link text-left" id="Pengguna" role="button" aria-haspopup="true" aria-expanded="false">
               <i class="flaticon-bar-chart-1"></i> Pengguna
             </a>
           </li>
+          <ul class="navbar-nav align-self-stretch">
+            <li class="">
+              <a href="/dashboard/lagu" class="nav-link text-left" id="Lagu" role="button" aria-haspopup="true" aria-expanded="false">
+                <i class="flaticon-bar-chart-1"></i> Lagu
+              </a>
+            </li>
+            <ul class="navbar-nav align-self-stretch">
+              <li class="">
+                <a href="/dashboard/genre" class="Genre nav-link text-left" id="Genre" role="button" aria-haspopup="true" aria-expanded="false">
+                  <i class="flaticon-bar-chart-1"></i> Genre
+                </a>
+              </li>
 
-          <li class="has-sub">
-            <a class="nav-link collapsed text-left" href="#collapseExample2" role="button" data-toggle="collapse">
-              <i class="flaticon-user"></i> Profile
-            </a>
-            <div class="collapse menu mega-dropdown" id="collapseExample2">
-              <div class="dropmenu" aria-labelledby="navbarDropdown">
-                <div class="container-fluid ">
-                  <div class="row">
-                    <div class="col-lg-12 px-2">
-                      <div class="submenu-box">
-                        <ul class="list-unstyled m-0">
-                          <li><a href="">PHP Frameworks</a></li>
-                          <li><a href="">Laravel</a></li>
-                          <li><a href=""> Codeigniter</a></li>
-                          <li><a href="">Node.js</a></li>
-                          <li><a href="">AngularJS</a></li>
-                          <li><a href="">ReactJS</a></li>
-                          <!-- <li><a href="">Asp.net</a></li> -->
-                        </ul>
+              <li class="has-sub">
+                <a class="nav-link collapsed text-left" href="#collapseExample2" role="button" data-toggle="collapse">
+                  <i class="flaticon-user"></i> Profile
+                </a>
+                <div class="collapse menu mega-dropdown" id="collapseExample2">
+                  <div class="dropmenu" aria-labelledby="navbarDropdown">
+                    <div class="container-fluid ">
+                      <div class="row">
+                        <div class="col-lg-12 px-2">
+                          <div class="submenu-box">
+                            <ul class="list-unstyled m-0">
+                              <li><a href="">PHP Frameworks</a></li>
+                              <li><a href="">Laravel</a></li>
+                              <li><a href=""> Codeigniter</a></li>
+                              <li><a href="">Node.js</a></li>
+                              <li><a href="">AngularJS</a></li>
+                              <li><a href="">ReactJS</a></li>
+                              <!-- <li><a href="">Asp.net</a></li> -->
+                            </ul>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </li>
-          <li class="">
-            <a class="nav-link text-left" role="button">
-              <i class="flaticon-bar-chart-1"></i> setting
-            </a>
-          </li>
+              </li>
+              <li class="">
+                <a class="nav-link text-left" role="button">
+                  <i class="flaticon-bar-chart-1"></i> setting
+                </a>
+              </li>
 
-          <li class="">
-            <a class="nav-link text-left" role="button">
-              <i class="flaticon-bar-chart-1"></i> invoice
-            </a>
-          </li>
-          <li class="">
-            <a class="nav-link text-left" role="button">
-              <i class="flaticon-bar-chart-1"></i> Bank
-            </a>
-          </li>
-          <li class="sidebar-header">
-            tools and component
-          </li>
+              <li class="">
+                <a class="nav-link text-left" role="button">
+                  <i class="flaticon-bar-chart-1"></i> invoice
+                </a>
+              </li>
+              <li class="">
+                <a class="nav-link text-left" role="button">
+                  <i class="flaticon-bar-chart-1"></i> Bank
+                </a>
+              </li>
+              <li class="sidebar-header">
+                tools and component
+              </li>
 
-          <li class="">
-            <a class="nav-link text-left" role="button">
-              <i class="flaticon-bar-chart-1"></i> ui element
-            </a>
-          </li>
+              <li class="">
+                <a class="nav-link text-left" role="button">
+                  <i class="flaticon-bar-chart-1"></i> ui element
+                </a>
+              </li>
 
-          <li class="">
-            <a class="nav-link text-left" role="button">
-              <i class="flaticon-bar-chart-1"></i> form
-            </a>
-          </li>
-          <li class="">
-            <a class="nav-link text-left" role="button">
-              <i class="flaticon-bar-chart-1"></i> table
-            </a>
-          </li>
+              <li class="">
+                <a class="nav-link text-left" role="button">
+                  <i class="flaticon-bar-chart-1"></i> form
+                </a>
+              </li>
+              <li class="">
+                <a class="nav-link text-left" role="button">
+                  <i class="flaticon-bar-chart-1"></i> table
+                </a>
+              </li>
 
-          <li class="sidebar-header">
-            tools and component
-          </li>
-          <li class="">
-            <a class="nav-link text-left" role="button">
-              <i class="flaticon-bar-chart-1"></i> chart
-            </a>
-          </li>
-          <li class="">
-            <a class="nav-link text-left" role="button">
-              <i class="flaticon-map"></i> map
-            </a>
-          </li>
+              <li class="sidebar-header">
+                tools and component
+              </li>
+              <li class="">
+                <a class="nav-link text-left" role="button">
+                  <i class="flaticon-bar-chart-1"></i> chart
+                </a>
+              </li>
+              <li class="">
+                <a class="nav-link text-left" role="button">
+                  <i class="flaticon-map"></i> map
+                </a>
+              </li>
 
-        </ul>
+            </ul>
 
 
       </div>

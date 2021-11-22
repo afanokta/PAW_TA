@@ -1,9 +1,9 @@
 <?= $this->extend('layout/dashboard-temp'); ?>
 
 <?= $this->section('content'); ?>
-<div class="mx-4">
-  <h1>Hello World !!!!</h1>
-  <p>ini adalah halaman dashboard pengguna</p>
+<div class="m-4">
+  <h1 class="mb-4">Pengguna JOOXTIFY</h1>
+
 
   <table class="table table-striped">
     <thead>
@@ -20,15 +20,15 @@
       <?php $i = 1;
       foreach ($pengguna as $cust) : ?>
         <tr>
-          <th scope="row"><?= $i; ?></th>
-          <td><?= $cust['ID_USER']; ?></td>
-          <td><?= $cust['USERNAME']; ?></td>
+          <th scope="row" class="align-middle"><?= $i; ?></th>
+          <td class="align-middle"><?= $cust['ID_USER']; ?></td>
+          <td class="align-middle"><?= $cust['USERNAME']; ?></td>
           <!-- <td><?= $cust['PASSWORD']; ?></td> -->
-          <td><?= $cust['STATUS_USER']; ?></td>
-          <td>
+          <td class="align-middle"><?= $cust['STATUS_USER']; ?></td>
+          <td class="align-middle">
             <div>
-              <a class="btn btn-primary">Edit</a>
-              <a class="btn btn-danger">Hapus</a>
+              <a class="btn btn-primary text-light">Edit</a>
+              <a class="btn btn-danger text-light">Hapus</a>
             </div>
           </td>
         </tr>

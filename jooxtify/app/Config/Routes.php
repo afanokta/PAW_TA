@@ -32,7 +32,10 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-$routes->get('/dashboard', 'dashboardController::dashboard');
+$routes->get('/dashboard', 'penggunaController::index');
+$routes->get('/dashboard/lagu', 'laguController::index');
+$routes->get('/dashboard/genre', 'genreController::index');
+$routes->get('/dashboard/genre/create', 'genreController::create');
 
 /*
  * --------------------------------------------------------------------
