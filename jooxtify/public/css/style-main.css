@@ -81,7 +81,7 @@ body {
 }
 
 .now-playing {
-  position: sticky;
+  position: fixed;
   bottom: 0;
   z-index: 1000;
   background-color: #542E71;

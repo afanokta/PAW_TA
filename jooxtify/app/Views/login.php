@@ -20,33 +20,38 @@
 </head>
 
 <body class="text-center">
-  <div class="container">
+  <main class="form-signin">
+  <?php
+        if(!empty(session()->getFlashdata('error'))):
+          ?>
+          <div class="alert alert-warning" role="alert">
+              <?php echo session()->getFlashdata('error'); ?>
+          </div>
+          <?php endif; ?>
+    <form action="/login/start" method="post">
+      <div class="logo my-4">
+        <img src="/img/jooxtify-logo.svg" alt="" height="57">
+      </div>
+      <h1 class="h3 mb-3 fw-normal">Login</h1>
 
-    <main class="form-signin">
-      <form action="/login/start" method="post">
-        <div class="logo my-4">
-          <img src="/img/jooxtify-logo.svg" alt="" height="57">
-        </div>
-        <h1 class="h3 mb-3 fw-normal">Login</h1>
-
-        <div class="form-floating">
-          <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com">
-          <label for="floatingInput">Email address</label>
-        </div>
-        <div class="form-floating">
-          <input type="password" class="form-control" id="floatingPassword" name="pass" placeholder="Password">
-          <label for="floatingPassword">Password</label>
-        </div>
-        <div class="checkbox mb-3">
-          <label>
-            <input type="checkbox" value="remember-me"> Remember me
-          </label>
-        </div>
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-        <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
-      </form>
-    </main>
-  </div>
+      <div class="form-floating">
+        <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com" required>
+        <label for="floatingInput" name="email">Email address</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="floatingPassword" name="pass" placeholder="Password" required>
+        <label for="floatingPassword" name="pass">Password</label>
+      </div>
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+      <p>Belum punya akun? <a href="/register">Daftar disini</a></p>
+      <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
+    </form>
+  </main>
   <!-- /#wrapper -->
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

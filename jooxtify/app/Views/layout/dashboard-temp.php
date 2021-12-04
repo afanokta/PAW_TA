@@ -57,84 +57,16 @@
               <i class="flaticon-bar-chart-1"></i> Album
             </a>
           </li>
-
-          <li class="has-sub">
-            <a class="nav-link collapsed text-left" href="#collapseExample2" role="button" data-toggle="collapse">
-              <i class="flaticon-user"></i> Profile
-            </a>
-            <div class="collapse menu mega-dropdown" id="collapseExample2">
-              <div class="dropmenu" aria-labelledby="navbarDropdown">
-                <div class="container-fluid ">
-                  <div class="row">
-                    <div class="col-lg-12 px-2">
-                      <div class="submenu-box">
-                        <ul class="list-unstyled m-0">
-                          <li><a href="">PHP Frameworks</a></li>
-                          <li><a href="">Laravel</a></li>
-                          <li><a href=""> Codeigniter</a></li>
-                          <li><a href="">Node.js</a></li>
-                          <li><a href="">AngularJS</a></li>
-                          <li><a href="">ReactJS</a></li>
-                          <!-- <li><a href="">Asp.net</a></li> -->
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
           <li class="">
-            <a class="nav-link text-left" role="button">
-              <i class="flaticon-bar-chart-1"></i> setting
-            </a>
-          </li>
-
-          <li class="">
-            <a class="nav-link text-left" role="button">
-              <i class="flaticon-bar-chart-1"></i> invoice
+            <a href="/dashboard/playlist" class="Genre nav-link text-left" id="Album" role="button" aria-haspopup="true" aria-expanded="false">
+              <i class="flaticon-bar-chart-1"></i> Playlist
             </a>
           </li>
           <li class="">
-            <a class="nav-link text-left" role="button">
-              <i class="flaticon-bar-chart-1"></i> Bank
+            <a href="/" class="Genre nav-link text-left" id="Album" role="button" aria-haspopup="true" aria-expanded="false">
+              <i class="flaticon-bar-chart-1"></i> Ke Halaman Utama Jooxtify
             </a>
           </li>
-          <li class="sidebar-header">
-            tools and component
-          </li>
-
-          <li class="">
-            <a class="nav-link text-left" role="button">
-              <i class="flaticon-bar-chart-1"></i> ui element
-            </a>
-          </li>
-
-          <li class="">
-            <a class="nav-link text-left" role="button">
-              <i class="flaticon-bar-chart-1"></i> form
-            </a>
-          </li>
-          <li class="">
-            <a class="nav-link text-left" role="button">
-              <i class="flaticon-bar-chart-1"></i> table
-            </a>
-          </li>
-
-          <li class="sidebar-header">
-            tools and component
-          </li>
-          <li class="">
-            <a class="nav-link text-left" role="button">
-              <i class="flaticon-bar-chart-1"></i> chart
-            </a>
-          </li>
-          <li class="">
-            <a class="nav-link text-left" role="button">
-              <i class="flaticon-map"></i> map
-            </a>
-          </li>
-
         </ul>
 
 

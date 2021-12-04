@@ -2,14 +2,29 @@
 
 namespace App\Controllers;
 
-class Home extends BaseController
+use App\Models\laguModel;
+
+class Home extends loginController
 {
+    protected $laguModel;
+    public function __construct()
+    {
+        $this->laguModel = new laguModel();
+    }
     public function index()
     {
-        return view('login');
+        $lagu = $this->laguModel->getAll();
+        // dd($lagu);
+        return parent::cekSession('jooxtify/index', ['title' => 'jooxtify', 'lagu'=>$lagu]);
     }
-    public function jooxtify()
+    public function play()
     {
-        return view('jooxtify');
+        return view('layout/play',['lagu'=>$_GET['nilai']]);
+    }
+    public function search()
+    {
+        // dd($_GET['nilai']);
+        $lagu = $this->laguModel->getSome($_GET['input']);
+        return parent::cekSession('jooxtify/index', ['title' => 'jooxtify', 'lagu'=>$lagu]);
     }
 }

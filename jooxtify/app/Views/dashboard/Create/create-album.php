@@ -9,9 +9,14 @@
       <label>Judul Album</label>
       <input type="text" class="form-control" size="20" name="judul">
     </div>
-    <div class="mb-3">
-      <label>Id Penyanyi</label>
-      <input type="number" class="form-control" name="penyanyi">
+    <div class="mb-3 d-flex flex-column">
+      <label for="cars">Penyanyi</label>
+
+      <select name="penyanyi" id="cars" class="form-control">
+        <?php foreach ($penyanyi as $p) : ?>
+          <option value="<?= $p['ID_PENYANYI']; ?>"><?php echo $p['ID_PENYANYI'] . ' | ' . $p['NAMA_PENYANYI']; ?></option>
+        <?php endforeach; ?>
+      </select>
     </div>
     <div class="mb-3">
       <label>Tanggal Rilis</label>

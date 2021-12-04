@@ -14,7 +14,7 @@ class AlbumModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = true;
     // protected $protectFields    = true;
-    protected $allowedFields    = ['JUDUL_ALBUM','ID_PENYANYI','TGL_TERBIT_ALBUM'];
+    protected $allowedFields    = ['JUDUL_ALBUM', 'ID_PENYANYI', 'TAHUN_TERBIT_ALBUM'];
 
     // Dates
     protected $useTimestamps = false;

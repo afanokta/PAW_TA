@@ -31,11 +31,11 @@
     <div class="container">
       <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-          <img src="assets/img/burger bar.svg" width="50" height="auto" alt="">
+          <img src="img/jooxtify/burger bar.svg" width="50" height="auto" alt="">
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item" href="index4.html"><img src="assets/img/Playlist.svg" width="auto" height="20" alt=""></a></li>
-          <li><a class="dropdown-item" href="#"><img src="assets/img/Discover.svg" width="auto" height="20" alt=""></a></li>
+          <li><a class="dropdown-item" href="index4.html"><img src="img/jooxtify/Playlist.svg" width="auto" height="20" alt=""></a></li>
+          <li><a class="dropdown-item" href="#"><img src="img/jooxtify/Discover.svg" width="auto" height="20" alt=""></a></li>
         </ul>
       </div>
       <a class="navbar-brand" href="#">
@@ -48,6 +48,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         </ul>
+        
         <form class="d-flex">
           <form action="" method="post">
             <div class="form-group search-nav">
@@ -67,13 +68,13 @@
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="assets/img/banner.png" class="d-block w-100" alt="...">
+          <img src="img/jooxtify/banner.png" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img id="banner" src="assets/img/UNLOCK YOUR CREATIVITY.png" class="d-block w-100" alt="...">
+          <img id="banner" src="img/jooxtify/UNLOCK YOUR CREATIVITY.png" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img id="banner" src="assets/img/LISTEN TO YOUR OWN MUSIC.png" class="d-block w-100" alt="...">
+          <img id="banner" src="img/jooxtify/LISTEN TO YOUR OWN MUSIC.png" class="d-block w-100" alt="...">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -89,40 +90,23 @@
     <div class="playlist">
       <div class="title-section"><a href="#">Recommended For You ></a></div>
       <div class="items">
-        <div><img src="assets/img/rekomen-1.svg "></div>
-        <div><img src="assets/img/rekomen-2.svg"></div>
-        <div><img src="assets/img/rekomen-3.svg"></div>
-        <div><img src="assets/img/rekomen-4.svg"></div>
-        <div><img src="assets/img/rekomen-4.svg"></div>
-        <div><img src="assets/img/rekomen-3.svg"></div>
-        <div><img src="assets/img/rekomen-2.svg"></div>
+        <div><img src="img/jooxtify/rekomen-1.svg "></div>
+        <div><img src="img/jooxtify/rekomen-2.svg"></div>
+        <div><img src="img/jooxtify/rekomen-3.svg"></div>
+        <div><img src="img/jooxtify/rekomen-4.svg"></div>
+        <div><img src="img/jooxtify/rekomen-4.svg"></div>
+        <div><img src="img/jooxtify/rekomen-3.svg"></div>
+        <div><img src="img/jooxtify/rekomen-2.svg"></div>
 
       </div>
 
-    </div>
-
-
-    <div class="music-video">
-      <div class="title-section"><a href="#"></a>Music Video ></a></div>
-      <div class="row mt-2">
-        <div class="col-md-6">
-          <video class="video1" width="100%" poster="assets/img/ancp.png" controls>
-            <source src="assets/vid/ancp_riseup.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="col-md-6">
-          <video class="video1" width="95%" poster="assets/img/mikha_depart.png" controls>
-            <source src="assets/vid/depart.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
     </div>
 
     <div class="now-playing">
       <div class="row">
         <div class="col-lg-6 d-flex">
           <div class="icon-playing">
-            <img src="assets/img/logo_ancp.png" alt="" srcset="">
+            <img src="img/jooxtify/logo_ancp.png" alt="" srcset="">
           </div>
           <div class="music-desc my-auto ms-4">
             <div class="title-music">Rise Up</div>
@@ -132,11 +116,11 @@
         <div class="col-lg-6 my-auto">
           <div class="bar-playing"></div>
           <div class="icon-item  d-flex flex-wrap justify-content-center gap-5">
-            <img src="assets/img/loop.svg" alt="" srcset="">
-            <img src="assets/img/before.svg" alt="" srcset="">
-            <button onclick="playMusic()" type="button"><img src="assets/img/play.svg" alt="" id="playingIcon" srcset="" onclick="playMusic"></button>
-            <img src="assets/img/next.svg" alt="" srcset="">
-            <img src="assets/img/shuffle.svg" alt="" srcset="">
+            <img src="img/jooxtify/loop.svg" alt="" srcset="">
+            <img src="img/jooxtify/before.svg" alt="" srcset="">
+            <button onclick="playMusic()" type="button"><img src="img/jooxtify/play.svg" alt="" id="playingIcon" srcset="" onclick="playMusic"></button>
+            <img src="img/jooxtify/next.svg" alt="" srcset="">
+            <img src="img/jooxtify/shuffle.svg" alt="" srcset="">
           </div>
         </div>
       </div>

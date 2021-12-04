@@ -1,0 +1,1 @@
+<source src="lagu/<?=$lagu?>" type="audio/mpeg">

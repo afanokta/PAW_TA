@@ -41,8 +41,9 @@
     <thead>
       <tr>
         <th scope="col">No</th>
+        <th scope="col">ID Album</th>
         <th scope="col">Judul Album</th>
-        <th scope="col">Penyanyi</th>
+        <th scope="col">ID Penyanyi</th>
         <th scope="col">Rilis</th>
         <th scope="col">Aksi</th>
       </tr>
@@ -54,9 +55,10 @@
       ?>
         <tr>
           <th scope="row" class="align-middle"><?= $i; ?></th>
+          <td class="align-middle"><?= $d['ID_ALBUM']; ?></td>
           <td class="align-middle"><?= $d['JUDUL_ALBUM']; ?></td>
           <td class="align-middle"><?= $d['ID_PENYANYI']; ?></td>
-          <td class="align-middle"><?= $d['TGL_TERBIT_ALBUM']; ?></td>
+          <td class="align-middle"><?= $d['TAHUN_TERBIT_ALBUM']; ?></td>
           <td class="align-middle">
             <div>
               <a class="btn btn-primary text-light" href="/dashboard/album/edit/<?= $d['ID_ALBUM'] ?>">Edit</a>
@@ -93,7 +95,7 @@
           <td class="align-middle"><?= $del['ID_ALBUM']; ?></td>
           <td class="align-middle"><?= $del['JUDUL_ALBUM']; ?></td>
           <td class="align-middle"><?= $del['ID_PENYANYI']; ?></td>
-          <td class="align-middle"><?= $del['TGL_TERBIT_ALBUM']; ?></td>
+          <td class="align-middle"><?= $del['TAHUN_TERBIT_ALBUM']; ?></td>
           <td class="align-middle">
             <div>
               <a class="btn btn-primary text-light" href="/dashboard/album/restore/<?= $del['ID_ALBUM'] ?>">Restore</a>

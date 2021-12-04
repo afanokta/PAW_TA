@@ -21,28 +21,47 @@
 
 <body class="text-center">
   <div class="container">
-
+  <?php
+        if(!empty(session()->getFlashdata('error'))):
+        ?>
+        <div class="alert alert-warning" role="alert">
+            <?php echo session()->getFlashdata('error'); ?>
+        </div>
+        <?php endif; ?>
+        
+        <?php
+        if(isset($errors)): foreach($errors as $e) :
+        ?>
+        <div class="alert alert-warning" role="alert">
+            <?=$e?>
+        </div>
+        <?php endforeach; endif; ?>
     <main class="form-signin">
-      <form action="/login/start" method="post">
+      <form action="<?=base_url('/register/reg')?>" method="post">
         <div class="logo my-4">
           <img src="/img/jooxtify-logo.svg" alt="" height="57">
         </div>
         <h1 class="h3 mb-3 fw-normal">Register</h1>
 
         <div class="form-floating">
-          <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com">
+          <input type="text" class="form-control" id="floatingUsername" name="username" placeholder="spectrum99" required>
+          <label for="floatingPassword">Username</label>
+        </div>
+        <div class="form-floating">
+          <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com" required>
           <label for="floatingInput">Email address</label>
         </div>
         <div class="form-floating">
-          <input type="password" class="form-control" id="floatingPassword" name="pass" placeholder="Password">
+          <input type="password" class="form-control" id="floatingPassword" name="pass" placeholder="Password" required minlength="8">
           <label for="floatingPassword">Password</label>
         </div>
         <div class="checkbox mb-3">
           <label>
-            <input type="checkbox" value="remember-me"> Remember me
+            <input type="checkbox" value="remember-me" required> Saya setuju dengan ketentuan yang berlaku
           </label>
         </div>
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
+        <p>sudah punya akun? <a href="/">Login</a></p>
         <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
       </form>
     </main>

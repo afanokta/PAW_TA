@@ -14,7 +14,7 @@ class PenyanyiModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = true;
     // protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = ['NAMA_PENYANYI', 'TGL_LAHIR_PENYANYI', 'FOTO'];
 
     // Dates
     // protected $useTimestamps = false;
