@@ -56,6 +56,7 @@ $routes->group('', function ($routes) {
     $routes->get('/profile/(:num)', "$control::profile/$1");
     $routes->get('/play', "$control::play");
     $routes->get('/search', "$control::search");
+    $routes->get('/about', "$control::about");
 });
 $routes->group('dashboard', function ($routes) {
 
@@ -63,6 +64,7 @@ $routes->group('dashboard', function ($routes) {
     $routes->group('pengguna', function ($routes) {
         $control = 'penggunaController';
         $routes->get('', "$control::index");
+        $routes->post('', "$control::add");
         $routes->get('create', "$control::create");
         $routes->get('edit/(:num)', "$control::edit/$1");
         $routes->get('hapus/(:num)', "$control::delete/$1");

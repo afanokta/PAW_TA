@@ -42,6 +42,12 @@
               <i class="flaticon-bar-chart-1"></i> Profile
             </a>
           </li>
+          <ul class="navbar-nav align-self-stretch">
+            <li class="">
+              <a href="/about" class="nav-link text-left" id="About" role="button" aria-haspopup="true" aria-expanded="false">
+                <i class="flaticon-bar-chart-1"></i> About
+              </a>
+            </li>
           <?php if (session()->get('status') == "ADMIN") : ?>
             <li class="">
               <a href="/dashboard/" class="Genre nav-link text-left" id="Album" role="button" aria-haspopup="true" aria-expanded="false">

@@ -16,11 +16,6 @@
       <input type="text" class="form-control" size="20" name="email" value="<?= $data['EMAIL'] ?>">
     </div>
 
-    <div class="mb-3">
-      <label>PASSWORD</label>
-      <input type="text" class="form-control" size="20" name="pass" value="<?= $data['PASSWORD'] ?>">
-    </div>
-
     <div class="mb-3 d-flex flex-column">
       <label for="cars">STATUS USER</label>
 

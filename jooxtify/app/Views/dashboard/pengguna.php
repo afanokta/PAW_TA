@@ -85,7 +85,6 @@
           <th scope="row" class="align-middle"><?= $i; ?></th>
           <td class="align-middle"><?= $del['ID_USER']; ?></td>
           <td class="align-middle"><?= $del['USERNAME']; ?></td>
-          <td class="align-middle"><?= $del['PASSWORD']; ?></td>
           <td class="align-middle"><?= $del['STATUS_USER']; ?></td>
           <td class="align-middle">
             <div>

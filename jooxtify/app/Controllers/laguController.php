@@ -118,18 +118,34 @@ class laguController extends loginController
       'ID_LAGU' => $deleted['ID_LAGU'],
       'ID_PENYANYI' => $deleted['ID_PENYANYI'],
       'ID_ALBUM' => $deleted['ID_ALBUM'],
+      'ID_GENRE' => $deleted['ID_GENRE'],
+      'FILE_LAGU' => $deleted['FILE_LAGU'],
       'JUDUL_LAGU' => $deleted['JUDUL_LAGU'],
       'TAHUN_TERBIT_LAGU' => $deleted['TAHUN_TERBIT_LAGU'],
     ];
     $this->model->insert($data);
     return redirect()->to('/dashboard/lagu')->with('success', 'restore');
   }
+  public function full_delete1($id, $filename)
+  {
+    // dd($data);
+    // try {
+    $this->model->where('ID_LAGU', $id)->purgeDeleted();
+    $filepath = "lagu/$filename";
+    unlink($filepath);
+    var_dump('TEST');
+    $data = $this->model->onlyDeleted()->find((int)$id);
+    return redirect()->to('/dashboard/lagu')->with('success', 'fulldelete');
+    // } catch (\Exception $e) {
+    // $this->model->where('ID_LAGU', $id)->purgeDeleted();
+    // return redirect()->to('/dashboard/lagu')->with('success', 'fulldelete');
+    // }
+  }
   public function full_delete($id, $filename)
   {
-    $filepath = 'lagu/' . $filename;
-    unlink($filepath);
+    $this->model->where('ID_LAGU', (int)$id)->purgeDeleted();
 
-    $this->model->where('ID_LAGU', $id)->purgeDeleted();
-    return redirect()->to('/dashboard/lagu')->with('success', 'fulldelete');
+    session()->setFlashdata('success', 'lagu berhasil dihapus permanen');
+    return redirect()->to(base_url('/dashboard/lagu'));
   }
 }

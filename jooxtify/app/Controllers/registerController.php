@@ -55,7 +55,7 @@ class registerController extends BaseController
         return redirect()->to(base_url('/login'));
       } else {
         return view('register', ['errors' => $this->model->errors()]);
-      };
+      }
     }
   }
 }

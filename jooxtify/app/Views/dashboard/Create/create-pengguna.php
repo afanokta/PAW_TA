@@ -15,14 +15,13 @@
     </div>
     <div class="mb-3">
       <label>Password</label>
-      <input type="password" class="form-control" name="password">
+      <input type="password" class="form-control" name="pass">
     </div>
     <div class="mb-3 d-flex flex-column">
-      <label for="cars">Penyanyi</label>
+      <label for="cars">Status User</label>
 
-      <select name="penyanyi" id="cars" class="form-control">
+      <select name="status" id="" class="form-control">
         <option value="REGULER">REGULER</option>
-        <option value="PREMIUM">PREMIUM</option>
         <option value="ADMIN">ADMIN</option>
       </select>
     </div>

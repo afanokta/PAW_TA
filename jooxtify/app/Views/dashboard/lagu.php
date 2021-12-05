@@ -32,14 +32,13 @@
       echo '<div class="alert alert-danger w-100" role="alert">
       Data berhasil dihapus permanen
     </div>';
-      break; 
+      break;
   }
   ?>
   <table class="table table-striped">
     <thead>
       <tr>
         <th scope="col">No</th>
-        <th scope="col">Id lagu</th>
         <th scope="col">Id penyanyi</th>
         <th scope="col">Id album</th>
         <th scope="col">judul</th>
@@ -54,7 +53,6 @@
       foreach ($data as $song) : ?>
         <tr>
           <th scope="row" class="align-middle"><?= $i; ?></th>
-          <td class="align-middle"><?= $song['ID_LAGU']; ?></td>
           <td class="align-middle"><?= $song['ID_PENYANYI']; ?></td>
           <td class="align-middle"><?= $song['ID_ALBUM']; ?></td>
           <td class="align-middle"><?= $song['JUDUL_LAGU']; ?></td>
@@ -77,7 +75,6 @@
     <thead>
       <tr>
         <th scope="col">No</th>
-        <th scope="col">Id lagu</th>
         <th scope="col">Id penyanyi</th>
         <th scope="col">Id album</th>
         <th scope="col">judul</th>
@@ -93,7 +90,6 @@
       ?>
         <tr>
           <th scope="row" class="align-middle"><?= $i; ?></th>
-          <td class="align-middle"><?= $del['ID_LAGU']; ?></td>
           <td class="align-middle"><?= $del['ID_PENYANYI']; ?></td>
           <td class="align-middle"><?= $del['ID_ALBUM']; ?></td>
           <td class="align-middle"><?= $del['JUDUL_LAGU']; ?></td>
@@ -102,7 +98,7 @@
           <td class="align-middle">
             <div>
               <a class="btn btn-primary text-light" href="/dashboard/lagu/restore/<?= $del['ID_LAGU'] ?>">Restore</a>
-              <a class="btn btn-danger text-light" href="/dashboard/lagu/hapus-permanen/<?= $del['ID_LAGU'] .'/'. $del['FILE_LAGU']?>">Hapus Permanen</a>
+              <a class="btn btn-danger text-light" href="/dashboard/lagu/hapus-permanen/<?= $del['ID_LAGU'] . '/' . $del['FILE_LAGU'] ?>">Hapus Permanen</a>
             </div>
           </td>
         </tr>

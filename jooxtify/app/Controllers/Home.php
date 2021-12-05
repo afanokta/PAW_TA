@@ -64,4 +64,8 @@ class Home extends loginController
         // dd($_POST['id']);
         return redirect()->to("/profile/$id")->with('success', 'update');
     }
+    public function about()
+    {
+        return parent::cekSessionPengguna('jooxtify/about', ['title' => 'Jooxtify | About']);
+    }
 }

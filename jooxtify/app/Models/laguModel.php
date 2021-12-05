@@ -47,13 +47,14 @@ class laguModel extends Model
     $builder->select('lagu.ID_LAGU,lagu.JUDUL_LAGU,lagu.FILE_LAGU,penyanyi.NAMA_PENYANYI,album.JUDUL_ALBUM');
     $builder->join('penyanyi', 'penyanyi.ID_PENYANYI = lagu.ID_PENYANYI');
     $builder->join('album', 'album.ID_ALBUM = lagu.ID_ALBUM');
+    $builder->where('lagu.deleted_at', null);
     return $builder->get()->getResultArray();
   }
   public function getSome($nama)
   {
 
     $builder = $this->db->table('lagu');
-    $builder->select('lagu.JUDUL_LAGU,lagu.FILE_LAGU,penyanyi.NAMA_PENYANYI,album.JUDUL_ALBUM');
+    $builder->select('lagu.ID_LAGU,lagu.JUDUL_LAGU,lagu.FILE_LAGU,penyanyi.NAMA_PENYANYI,album.JUDUL_ALBUM');
     $builder->join('penyanyi', 'penyanyi.ID_PENYANYI = lagu.ID_PENYANYI');
     $builder->join('album', 'album.ID_ALBUM = lagu.ID_ALBUM');
     $builder->like("lagu.JUDUL_LAGU", $nama, 'both');

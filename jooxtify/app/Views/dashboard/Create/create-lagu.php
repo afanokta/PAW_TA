@@ -44,7 +44,7 @@
       <label>Tahun Terbit</label>
       <input type="number" class="form-control" name="tahun">
     </div>
-    <button type="submit" class="btn btn-primary">Tambah Album</button>
+    <button type="submit" class="btn btn-primary">Tambah Lagu</button>
   </form>
 </div>
 <?= $this->endSection('content'); ?>

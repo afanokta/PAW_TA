@@ -27,7 +27,7 @@ class penggunaController extends loginController
     $data = [
       'USERNAME' => $_POST['username'],
       'EMAIL' => $_POST['email'],
-      'PASSWORD' => $_POST['pass'],
+      'PASSWORD' => password_hash($this->request->getVar("pass"), PASSWORD_DEFAULT),
       'STATUS_USER' => $_POST['status'],
     ];
     $this->model->insert($data);
@@ -46,14 +46,12 @@ class penggunaController extends loginController
     if ($user['EMAIL'] == $_POST['email']) {
       $data = [
         'USERNAME' => $_POST['username'],
-        'PASSWORD' => $_POST['pass'],
         'STATUS_USER' => $_POST['status'],
       ];
     } else {
       $data = [
         'USERNAME' => $_POST['username'],
         'EMAIL' => $_POST['email'],
-        'PASSWORD' => $_POST['pass'],
         'STATUS_USER' => $_POST['status'],
       ];
     }
