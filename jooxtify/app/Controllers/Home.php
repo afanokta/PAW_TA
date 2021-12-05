@@ -20,16 +20,22 @@ class Home extends loginController
         // dd($lagu);
         return parent::cekSessionPengguna('jooxtify/index', ['title' => 'Jooxtify | Home', 'lagu' => $lagu]);
     }
+    public function detail($id)
+    {
+        $lagu = $this->laguModel->getLagu($id);
+        // dd($lagu);
+        return parent::cekSessionPengguna('jooxtify/detail', ['title' => 'Jooxtify | Home', 'lagu' => $lagu]);
+    }
     public function play()
     {
-        return view('layout/play',['lagu'=>$_GET['nilai'],'judul'=>$_GET['judul'],'penyanyi'=>$_GET['penyanyi']]);
+        return view('layout/play', ['lagu' => $_GET['nilai'], 'judul' => $_GET['judul'], 'penyanyi' => $_GET['penyanyi']]);
     }
     public function search()
     {
         // dd($_GET['nilai']);
 
         $lagu = $this->laguModel->getSome($_GET['nilai']);
-        return view('layout/search', ['lagu'=>$lagu]);
+        return view('layout/search', ['lagu' => $lagu]);
     }
     public function profile($id)
     {

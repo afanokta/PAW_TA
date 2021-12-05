@@ -119,7 +119,7 @@ class laguController extends loginController
       'ID_PENYANYI' => $deleted['ID_PENYANYI'],
       'ID_ALBUM' => $deleted['ID_ALBUM'],
       'JUDUL_LAGU' => $deleted['JUDUL_LAGU'],
-      'TAHUN_TERBIT_LAGU' => $deleted['tgl'],
+      'TAHUN_TERBIT_LAGU' => $deleted['TAHUN_TERBIT_LAGU'],
     ];
     $this->model->insert($data);
     return redirect()->to('/dashboard/lagu')->with('success', 'restore');

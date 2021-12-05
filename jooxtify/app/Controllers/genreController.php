@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Models\genreModel;
 
-class genreController extends BaseController
+class genreController extends loginController
 {
   protected $genreModel;
   public function __construct()
@@ -20,14 +20,14 @@ class genreController extends BaseController
       'genre' => $genre,
       'delete' => $delete
     ];
-    return view('dashboard/genre', $data);
+    return parent::cekSession('dashboard/genre', $data);
   }
   public function create()
   {
     $data = [
       'title' => 'Dashboard | Genre'
     ];
-    return view('dashboard/create/create-genre', $data);
+    return parent::cekSession('dashboard/create/create-genre', $data);
   }
 
   public function add()
@@ -43,7 +43,7 @@ class genreController extends BaseController
   public function edit($id)
   {
     $data = $this->genreModel->find($id);
-    return view('dashboard/edit/edit-genre', ["title" => "Dashboard | Genre","data" => $data]);
+    return parent::cekSession('dashboard/edit/edit-genre', ["title" => "Dashboard | Genre","data" => $data]);
   }
 
   public function update()

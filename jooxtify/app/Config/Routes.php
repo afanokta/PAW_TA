@@ -51,6 +51,7 @@ $routes->get('/logout', 'loginController::logout');
 $routes->group('', function ($routes) {
     $control = 'Home';
     $routes->get('/', "$control::index");
+    $routes->get('/detail/(:num)', "$control::detail/$1");
     $routes->post('/profile/update', "$control::updateProfile");
     $routes->get('/profile/(:num)', "$control::profile/$1");
     $routes->get('/play', "$control::play");

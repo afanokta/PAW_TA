@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Models\AlbumModel;
 use App\Models\PenyanyiModel;
 
-class albumController extends BaseController
+class albumController extends loginController
 {
     protected $model;
     protected $penyanyi;
@@ -19,12 +19,12 @@ class albumController extends BaseController
     {
         $Data = $this->model->findAll();
         $delete = $this->model->onlyDeleted()->findAll();
-        return view('dashboard/album', ['title' => 'album', 'data' => $Data, 'delete' => $delete]);
+        return parent::cekSession('dashboard/album', ['title' => 'Dashboard | Album', 'data' => $Data, 'delete' => $delete]);
     }
     public function create()
     {
         $penyanyi = $this->penyanyi->findAll();
-        return view('dashboard/create/create-album', ['title' => 'create album', 'penyanyi' => $penyanyi]);
+        return parent::cekSession('dashboard/create/create-album', ['title' => 'Dashboard | Album', 'penyanyi' => $penyanyi]);
     }
     public function add()
     {
@@ -43,7 +43,7 @@ class albumController extends BaseController
         $data = $this->model->find($id);
         $penyanyi = $this->penyanyi->findAll();
         // var_dump($data);
-        return view('dashboard/edit/edit-album', ['title' => 'album', 'data' => $data, 'penyanyi' => $penyanyi]);
+        return parent::cekSession('dashboard/edit/edit-album', ['title' => 'Dashboard | Album', 'data' => $data, 'penyanyi' => $penyanyi]);
     }
 
     public function update()

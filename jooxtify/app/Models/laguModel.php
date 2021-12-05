@@ -44,7 +44,7 @@ class laguModel extends Model
   {
 
     $builder = $this->db->table('lagu');
-    $builder->select('lagu.JUDUL_LAGU,lagu.FILE_LAGU,penyanyi.NAMA_PENYANYI,album.JUDUL_ALBUM');
+    $builder->select('lagu.ID_LAGU,lagu.JUDUL_LAGU,lagu.FILE_LAGU,penyanyi.NAMA_PENYANYI,album.JUDUL_ALBUM');
     $builder->join('penyanyi', 'penyanyi.ID_PENYANYI = lagu.ID_PENYANYI');
     $builder->join('album', 'album.ID_ALBUM = lagu.ID_ALBUM');
     return $builder->get()->getResultArray();
@@ -56,17 +56,20 @@ class laguModel extends Model
     $builder->select('lagu.JUDUL_LAGU,lagu.FILE_LAGU,penyanyi.NAMA_PENYANYI,album.JUDUL_ALBUM');
     $builder->join('penyanyi', 'penyanyi.ID_PENYANYI = lagu.ID_PENYANYI');
     $builder->join('album', 'album.ID_ALBUM = lagu.ID_ALBUM');
-    $builder->like("lagu.JUDUL_LAGU",$nama);
+    $builder->like("lagu.JUDUL_LAGU", $nama, 'both');
+    $builder->orlike("penyanyi.NAMA_PENYANYI", $nama, 'both');
+    $builder->orlike("album.JUDUL_ALBUM", $nama, 'both');
     return $builder->get()->getResultArray();
   }
-  public function getLagu($file)
+  public function getLagu($id)
   {
 
     $builder = $this->db->table('lagu');
-    $builder->select('lagu.JUDUL_LAGU,lagu.FILE_LAGU,penyanyi.NAMA_PENYANYI,album.JUDUL_ALBUM');
+    $builder->select('lagu.ID_LAGU,lagu.JUDUL_LAGU,lagu.FILE_LAGU,penyanyi.NAMA_PENYANYI,album.JUDUL_ALBUM,penyanyi.FOTO,lagu.TAHUN_TERBIT_LAGU,genre.GENRE');
     $builder->join('penyanyi', 'penyanyi.ID_PENYANYI = lagu.ID_PENYANYI');
     $builder->join('album', 'album.ID_ALBUM = lagu.ID_ALBUM');
-    $builder->where("lagu.FILE_LAGU",$file);
+    $builder->join('genre', 'genre.ID_GENRE = lagu.ID_GENRE');
+    $builder->where("lagu.ID_LAGU", $id);
     return $builder->get()->getResultArray();
   }
 }
