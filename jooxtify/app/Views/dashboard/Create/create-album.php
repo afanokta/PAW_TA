@@ -20,7 +20,7 @@
     </div>
     <div class="mb-3">
       <label>Tanggal Rilis</label>
-      <input type="date" class="form-control" name="rilis">
+      <input type="num" class="form-control" name="rilis">
     </div>
     <button type="submit" class="btn btn-primary">Tambah Album</button>
   </form>

@@ -59,4 +59,14 @@ class laguModel extends Model
     $builder->like("lagu.JUDUL_LAGU",$nama);
     return $builder->get()->getResultArray();
   }
+  public function getLagu($file)
+  {
+
+    $builder = $this->db->table('lagu');
+    $builder->select('lagu.JUDUL_LAGU,lagu.FILE_LAGU,penyanyi.NAMA_PENYANYI,album.JUDUL_ALBUM');
+    $builder->join('penyanyi', 'penyanyi.ID_PENYANYI = lagu.ID_PENYANYI');
+    $builder->join('album', 'album.ID_ALBUM = lagu.ID_ALBUM');
+    $builder->where("lagu.FILE_LAGU",$file);
+    return $builder->get()->getResultArray();
+  }
 }

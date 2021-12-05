@@ -33,22 +33,12 @@
 
         <ul class="navbar-nav align-self-stretch">
           <li class="">
-            <a href="/dashboard/lagu" class="nav-link text-left" id="Lagu" role="button" aria-haspopup="true" aria-expanded="false">
-              <i class="flaticon-bar-chart-1"></i> Lagu
+            <a href="/" class="nav-link text-left" id="Home" role="button" aria-haspopup="true" aria-expanded="false">
+              <i class="flaticon-bar-chart-1"></i> Home
             </a>
           </li>
           <li class="">
-            <a href="/dashboard/genre" class="Genre nav-link text-left" id="Genre" role="button" aria-haspopup="true" aria-expanded="false">
-              <i class="flaticon-bar-chart-1"></i> Genre
-            </a>
-          </li>
-          <li class="">
-            <a href="/dashboard/penyanyi" class="Genre nav-link text-left" id="Penyanyi" role="button" aria-haspopup="true" aria-expanded="false">
-              <i class="flaticon-bar-chart-1"></i> Penyanyi
-            </a>
-          </li>
-          <li class="">
-            <a href="/dashboard/album" class="Genre nav-link text-left" id="Album" role="button" aria-haspopup="true" aria-expanded="false">
+            <a href="/profile/<?php echo session()->get("id"); ?>" class="Genre nav-link text-left" id="Profile" role="button" aria-haspopup="true" aria-expanded="false">
               <i class="flaticon-bar-chart-1"></i> Profile
             </a>
           </li>

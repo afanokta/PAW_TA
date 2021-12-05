@@ -58,11 +58,6 @@
             </a>
           </li>
           <li class="">
-            <a href="/dashboard/playlist" class="Genre nav-link text-left" id="Album" role="button" aria-haspopup="true" aria-expanded="false">
-              <i class="flaticon-bar-chart-1"></i> Playlist
-            </a>
-          </li>
-          <li class="">
             <a href="/" class="Genre nav-link text-left" id="Album" role="button" aria-haspopup="true" aria-expanded="false">
               <i class="flaticon-bar-chart-1"></i> Ke Halaman Utama Jooxtify
             </a>

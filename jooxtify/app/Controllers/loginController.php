@@ -57,6 +57,19 @@ class loginController extends BaseController
   }
   public function cekSession($url, $data)
   {
+
+    if (!session()->has('username') && !session()->has('email')) {
+      return redirect()->to(base_url('/login'));
+    } else {
+      if (session()->get('status') != "ADMIN") {
+        return redirect()->to(base_url('/'));
+      }
+      return view($url, $data);
+    }
+  }
+  public function cekSessionPengguna($url, $data)
+  {
+
     if (!session()->has('username') && !session()->has('email')) {
       return redirect()->to(base_url('/login'));
     } else {

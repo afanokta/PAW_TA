@@ -51,9 +51,11 @@ $routes->get('/logout', 'loginController::logout');
 $routes->group('', function ($routes) {
     $control = 'Home';
     $routes->get('/', "$control::index");
+    $routes->post('/profile/update', "$control::updateProfile");
+    $routes->get('/profile/(:num)', "$control::profile/$1");
     $routes->get('/play', "$control::play");
+    $routes->get('/search', "$control::search");
 });
-$routes->get('/search', "Home::search");
 $routes->group('dashboard', function ($routes) {
 
     $routes->get('', 'penggunaController:index');

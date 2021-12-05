@@ -1,40 +1,44 @@
 
-// var a = document.getElementById('search');
-// var con = document.getElementById('setplay');
-// function play(id) {
-// //   console.log("HELOO");
-//     var ajax = new XMLHttpRequest();
-//     ajax.onreadystatechange = ()=>{
-//         if(ajax.readyState == 4 && ajax.status==200){
-//             con.innerHTML = ajax.responseText;
-//         }
-//     }
+// var a = document.getElementsByClassName('play');
+var con = document.getElementById('setplay');
 
-//     ajax.open("GET",'/play?nilai='+id);
-//     ajax.send();
-// }
+function play(id,lagu, penyanyi) {
+    console.log(id);
+    console.log(lagu);
+    console.log(penyanyi);
 
-// a.addEventListener("keyup",()=>{
+    var ajax = new XMLHttpRequest();
+    ajax.onreadystatechange = ()=>{
+        if(ajax.readyState == 4 && ajax.status==200){
+            con.innerHTML = ajax.responseText;
+        }
+    }
 
+    ajax.open("GET",'/play?nilai='+id+'&judul='+lagu+'&penyanyi='+penyanyi,true);
+    ajax.send();
+}
 
     var a = document.getElementById('search');
-    var con = document.getElementById('container');
+    var content = document.getElementById('container');
     
     a.addEventListener("keyup",()=>{
         
-        var ajax = new XMLHttpRequest();
+        var hxr = new XMLHttpRequest();
     
-        ajax.onreadystatechange = ()=>{
-            if(ajax.readyState == 4 && ajax.status==200){
-                con.innerHTML = ajax.responseText;
+        hxr.onreadystatechange = ()=>{
+            if(hxr.readyState == 4 && hxr.status==200){
+                content.innerHTML = hxr.responseText;
+                // console.log('ok');
             }
         }
-    
-        ajax.open("GET",'/search?nilai='+a.value);
-        ajax.send();
+        try{
+            hxr.open("GET",'/search?nilai='+a.value,true);
+        }catch(e){
+            console.log(e);
+        }
+        hxr.send();
     
     });
-    
     
     
 
